@@ -1,0 +1,59 @@
+GET http://localhost:8000/user
+
+###
+GET http://localhost:8000/user/gameplayapp007@gmail.com
+###
+
+POST http://localhost:8000/user
+Content-Type: application/json
+
+{
+    "name":"TEst User",
+    "email":"test@gmail.com",
+    "image":"Test Image"
+}
+
+
+###
+GET http://localhost:8000/post
+
+
+###
+
+POST http://localhost:8000/post
+Content-Type: application/json
+
+{
+    "postText":"Sample Post Msg",
+    "createdAt":"326347347",
+    "createdBy":"6596e7e039f59629cd43289e",
+    "imageUrl":"SampleUrl"
+}
+
+###
+PUT http://localhost:8000/post/like/659762151be7a262e3679dd6
+Content-Type: application/json
+
+{
+    "userId":"6597615439f59629cddfd398",
+    "isLike":true
+}
+
+
+
+
+###
+POST http://localhost:8000/comment
+Content-Type:  application/json
+
+{
+    "post":"659762151be7a262e3679dd6",
+    "createdBy":"6597615439f59629cddfd398",
+    "commentText":"Sample nEw Comment",
+    "createdAt":"1234"
+
+}
+
+###
+
+DELETE  http://localhost:8000/comment/6598bf62a127740fd8682732
